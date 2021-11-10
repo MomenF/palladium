@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:free_laner_project11/languages/custome_languages.dart';
-import 'package:free_laner_project11/services/services.dart';
+import 'package:palladium/services/index_screen.dart';
+
 import 'package:provider/provider.dart';
 
 import 'config.dart';
+import 'languages/custome_languages.dart';
 import 'module/moduls.dart';
 import 'screens/screens.dart';
 
