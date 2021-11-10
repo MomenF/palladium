@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:palladium/screens/screens.dart';
 import '../languages/languages.dart';
 
 import '../services/services.dart';
@@ -127,7 +128,9 @@ class CustomDrawer extends StatelessWidget {
                           Icons.settings_outlined, getTranslate(context, "settings")),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const LoginScreen()));
+                      },
                       child: _buildListViewItems(Icons.login_outlined, getTranslate(context, "logIn")),
                     ),
                   ],
