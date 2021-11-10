@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:palladium/languages/custome_languages.dart';
-import 'package:provider/provider.dart';
+import '../languages/languages.dart';
 
 import '../services/services.dart';
 import '../config.dart';

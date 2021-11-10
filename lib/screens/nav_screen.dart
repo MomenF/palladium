@@ -1,10 +1,13 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'package:palladium/languages/custome_languages.dart';
-import 'package:palladium/module/brands.dart';
-import 'package:palladium/services/index_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:http/http.dart' as http;
+
+import '../languages/custome_languages.dart';
+import '../module/brands.dart';
+import '../module/moduls.dart';
+import '../services/index_screen.dart';
 import '../widgets/widgets.dart';
 import '../config.dart';
 import 'screens.dart';
@@ -24,6 +27,15 @@ class _NavScreenState extends State<NavScreen> {
     const PaymentScreen(),
     const SettingScreen(),
   ];
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Provider.of<Brand>(context, listen: false).fitchData();
+    Provider.of<Country>(context, listen: false).fitchData();
+    Provider.of<MemberShip>(context, listen: false).fitchData();
+    Provider.of<Product>(context, listen: false).fitchData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +48,6 @@ class _NavScreenState extends State<NavScreen> {
             ? AppBar(
                 title: Text(
                   getTranslate(context, "palladium"),
-                  // Provider.of<Brand>(context, listen: true)
-                  //             .brands![0]
-                  //             .createdAt!.isNotEmpty
-                  //     ? "no data "
-                  //     : "yes Data",
                   style: const TextStyle(
                     fontFamily: 'Open Sans',
                     fontSize: 20,
@@ -64,73 +71,27 @@ class _NavScreenState extends State<NavScreen> {
                         print("start");
                         Provider.of<LanguageProvider>(context, listen: false)
                             .myChangeLanguage();
-                        // Provider.of<Brands>(context, listen: false).getBrands();
-
-                        var request = http.Request(
-                            'GET',
-                            Uri.parse(
-                                'https://packages.3codeit.com/api/brands'));
-                        http.StreamedResponse response = await request.send();
-                        if (response.statusCode == 200) {
-                          // print(await response.stream.bytesToString());
-                          var json = (await jsonDecode(
-                              await response.stream.bytesToString()));
-                          // Brand.fromJson(json);
-                          Provider.of<Brand>(context, listen: false)
-                              .fromJson(json);
-                        } else {
-                          print(response.reasonPhrase);
-                        }
-
                         print(Provider.of<Brand>(context, listen: false)
                             .brands![0]
                             .createdAt);
+                        print(Provider.of<Country>(context, listen: false)
+                            .countries![0]
+                            .memberships![0]
+                            .pivot!
+                            .countryId);
 
-                        //Register Method
-                        // var request = http.MultipartRequest('POST', Uri.parse('https://packages.3codeit.com/api/register'));
-                        // request.fields.addAll({
-                        //   'name': 'hossam',
-                        //   'email': 'hossam@ma.com',
-                        //   'password': '12345678',
-                        //   'phone': '1555',
-                        //   'country_id': '1',
-                        //   'account_type': 'company',
-                        //   'company_name': ''
-                        // });
-                        // http.StreamedResponse response = await request.send();
-                        // if (response.statusCode == 200) {
-                        //   print(await response.stream.bytesToString());
-                        // }
-                        // else {
-                        //   print(response.reasonPhrase);
-                        // }
-
-                        // LogIn Method
-                        // Uri myurl =Uri.parse('https://packages.3codeit.com/api/login');
-                        //
-                        // http.post(myurl, headers: {
-                        //   'Accept': 'application/json',
-                        //   'authorization': 'pass your key(optional)'
-                        // }, body: {
-                        //   "email": 'hossam@ma.com',
-                        //   "password": "12345678"
-                        // }).then((response) {
-                        //   print(response.statusCode);
-                        //   print(response.body);
-                        // });
-
-                        // var request = http.MultipartRequest('POST', Uri.parse('https://packages.3codeit.com/api/login'));
-                        // request.fields.addAll({
-                        //   'email': 'hossam@ma.com',
-                        //   'password': '12345678'
-                        // });
-                        // http.StreamedResponse response = await request.send();
-                        // if (response.statusCode == 200) {
-                        //   print(await response.stream.bytesToString());
-                        // }
-                        // else {
-                        //   print(response.reasonPhrase);
-                        // }
+                        var request = http.MultipartRequest(
+                            'POST',
+                            Uri.parse(
+                                'https://packages.3codeit.com/api/login'));
+                        request.fields.addAll(
+                            {'email': 'maged@ma.com', 'password': '123'});
+                        http.StreamedResponse response = await request.send();
+                        if (response.statusCode == 200) {
+                          print(await response.stream.bytesToString());
+                        } else {
+                          print(response.reasonPhrase);
+                        }
                       },
                       icon: const Icon(
                         Icons.search,

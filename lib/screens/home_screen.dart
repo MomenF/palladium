@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:palladium/languages/custome_languages.dart';
 
+import '../languages/languages.dart';
 import '../config.dart';
 
 class HomeScreen extends StatefulWidget {
