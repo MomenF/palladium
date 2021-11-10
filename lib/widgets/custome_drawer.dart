@@ -85,7 +85,10 @@ class CustomDrawer extends StatelessWidget {
                       child: _buildListViewItems(Icons.search, "Search Items"),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        changeIndexScreen(context,1);
+                        Navigator.pop(context);
+                      },
                       child:
                           _buildListViewItems(Icons.layers_outlined, "Brands"),
                     ),
@@ -98,7 +101,10 @@ class CustomDrawer extends StatelessWidget {
                       child: _buildListViewItems(Icons.cloud, "Total Pricing"),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        changeIndexScreen(context,3);
+                        Navigator.pop(context);
+                      },
                       child: _buildListViewItems(
                           Icons.credit_card_outlined, "Subscriptions"),
                     ),
