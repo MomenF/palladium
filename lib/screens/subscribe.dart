@@ -41,16 +41,16 @@ class _PlansState extends State<Plans> {
                       height: 150,
                       width: 400,
                     ),
-                    Positioned(
-                        top: 93.0,
-                        right: 86.0,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text("1000 view"),
-                            Text("3 No devices"),
-                          ],
-                        ))
+                    // Positioned(
+                    //     top: 93.0,
+                    //     right: 86.0,
+                    //     child: Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: const [
+                    //         Text("1000 view"),
+                    //         Text("3 No devices"),
+                    //       ],
+                    //     ))
                   ],
                 ),
               ),
@@ -64,16 +64,16 @@ class _PlansState extends State<Plans> {
                       height: 150,
                       width: 400,
                     ),
-                    Positioned(
-                        top: 93.0,
-                        right: 80.0,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text("1000 view"),
-                            Text("3 No devices"),
-                          ],
-                        ))
+                    // Positioned(
+                    //     top: 93.0,
+                    //     right: 80.0,
+                    //     child: Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: const [
+                    //         Text("1000 view"),
+                    //         Text("3 No devices"),
+                    //       ],
+                    //     ))
                   ],
                 ),
               ),
@@ -87,16 +87,16 @@ class _PlansState extends State<Plans> {
                       height: 150,
                       width: 400,
                     ),
-                    Positioned(
-                        top: 93.0,
-                        right: 75.0,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text("1000 view"),
-                            Text("3 No devices"),
-                          ],
-                        ))
+                    // Positioned(
+                    //     top: 93.0,
+                    //     right: 75.0,
+                    //     child: Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: const [
+                    //         Text("1000 view"),
+                    //         Text("3 No devices"),
+                    //       ],
+                    //     ))
                   ],
                 ),
               ),
