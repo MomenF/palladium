@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:palladium/languages/custome_languages.dart';
 import '../config.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -9,6 +10,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -58,10 +60,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 20.0,
                   ),
                   Row(
-                    children: const [
+                    children:   [
                       Text(
-                        'Login Now',
-                        style: TextStyle(
+                        getTranslate(myProviderContext!, "loginNow"),
+                        style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 25.0),
@@ -74,9 +76,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     endIndent: width * 0.7,
                   ),
                   SizedBox(height: height * 0.01),
-                  const Text(
-                    'You can use Mobile number or Email to Enter App',
-                    style: TextStyle(
+                   Text(
+                    getTranslate(myProviderContext!, "You can use Mobile number or Email to Enter App"),
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 16.0),
                   ),
@@ -93,14 +95,14 @@ class _LoginScreenState extends State<LoginScreen> {
                               appBar: AppBar(
                                 backgroundColor: backGroundApp,
                                 elevation: 0,
-                                flexibleSpace: const TabBar(
+                                flexibleSpace:  TabBar(
                                   indicatorColor: Colors.blueAccent,
                                   indicatorSize: TabBarIndicatorSize.tab,
                                   tabs: [
                                     Tab(
                                       child: Text(
-                                        'Sign Up',
-                                        style: TextStyle(
+                                        getTranslate(myProviderContext!, "signUp"),//'Sign Up',
+                                        style: const TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
                                             fontSize: 23),
@@ -108,8 +110,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                     ),
                                     Tab(
                                       child: Text(
-                                        'Log In',
-                                        style: TextStyle(
+                                        getTranslate(myProviderContext!, "logIn"),//'Log In',
+                                        style: const TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
                                             fontSize: 23),
@@ -132,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               borderRadius:
                                                   BorderRadius.circular(15),
                                             ),
-                                            hintText: 'Full name',
+                                            hintText: getTranslate(myProviderContext!, "fullName"),
                                             hintStyle: const TextStyle(
                                               color: Colors.white,
                                             ),
@@ -151,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               borderRadius:
                                                   BorderRadius.circular(15),
                                             ),
-                                            hintText: 'Mobile',
+                                            hintText: getTranslate(myProviderContext!, "mobile"),
                                             hintStyle: const TextStyle(
                                               color: Colors.white,
                                             ),
@@ -170,7 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               borderRadius:
                                                   BorderRadius.circular(15),
                                             ),
-                                            hintText: 'Email',
+                                            hintText: getTranslate(myProviderContext!, "Email"),
                                             hintStyle: const TextStyle(
                                               color: Colors.white,
                                             ),
@@ -189,7 +191,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               borderRadius:
                                                   BorderRadius.circular(15),
                                             ),
-                                            hintText: 'Password',
+                                            hintText: getTranslate(myProviderContext!, "Password"),
                                             hintStyle: const TextStyle(
                                               color: Colors.white,
                                             ),
@@ -210,8 +212,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   BorderRadius.circular(8)),
                                           onPressed: () {},
                                           child: Text(
-                                            "SIGN UP",
-                                            style: TextStyle(
+                                            getTranslate(myProviderContext!, "SIGN UP"),
+                                            style: const TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 23),
@@ -233,7 +235,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               borderRadius:
                                                   BorderRadius.circular(15),
                                             ),
-                                            hintText: 'Mobile',
+                                            hintText: getTranslate(myProviderContext!, "mobile"),
                                             hintStyle: const TextStyle(
                                               color: Colors.white,
                                             ),
@@ -252,7 +254,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               borderRadius:
                                                   BorderRadius.circular(15),
                                             ),
-                                            hintText: 'Password',
+                                            hintText: getTranslate(myProviderContext!, "Password"),
                                             hintStyle: const TextStyle(
                                               color: Colors.white,
                                             ),
@@ -273,8 +275,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   BorderRadius.circular(8)),
                                           onPressed: () {},
                                           child: Text(
-                                            "Log In",
-                                            style: TextStyle(
+                                            getTranslate(myProviderContext!, "logIn"),
+                                            style: const TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 23),

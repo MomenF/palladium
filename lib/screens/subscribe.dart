@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:palladium/config.dart';
+import 'package:palladium/languages/custome_languages.dart';
 
 class Plans extends StatefulWidget {
   const Plans({Key? key}) : super(key: key);
@@ -15,9 +16,9 @@ class _PlansState extends State<Plans> {
     return Scaffold(
       backgroundColor: backGroundApp,
       appBar: AppBar(
-        title: const Text(
-          "Plans",
-          style: TextStyle(color: Color(0xff39719F)),
+        title:  Text(
+          getTranslate(context, "plans"),
+          style: const TextStyle(color: Color(0xff39719F)),
         ),
         centerTitle: true,
         elevation: 0,

@@ -82,7 +82,7 @@ class CustomDrawer extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {},
-                      child: _buildListViewItems(Icons.search, "Search Items"),
+                      child: _buildListViewItems(Icons.search, getTranslate(context, "searchItems")),
                     ),
                     GestureDetector(
                       onTap: () {
@@ -90,15 +90,15 @@ class CustomDrawer extends StatelessWidget {
                         Navigator.pop(context);
                       },
                       child:
-                          _buildListViewItems(Icons.layers_outlined, "Brands"),
+                          _buildListViewItems(Icons.layers_outlined, getTranslate(context, "brands")),
                     ),
                     GestureDetector(
                       onTap: () {},
-                      child: _buildListViewItems(Icons.cloud, "Calculator"),
+                      child: _buildListViewItems(Icons.cloud, getTranslate(context, "calculator")),
                     ),
                     GestureDetector(
                       onTap: () {},
-                      child: _buildListViewItems(Icons.cloud, "Total Pricing"),
+                      child: _buildListViewItems(Icons.cloud, getTranslate(context, "totalPricing")),
                     ),
                     GestureDetector(
                       onTap: () {
@@ -106,17 +106,17 @@ class CustomDrawer extends StatelessWidget {
                         Navigator.pop(context);
                       },
                       child: _buildListViewItems(
-                          Icons.credit_card_outlined, "Subscriptions"),
+                          Icons.credit_card_outlined, getTranslate(context, "subscriptions")),
                     ),
                     GestureDetector(
                       onTap: () {},
                       child: _buildListViewItems(
-                          Icons.phone_outlined, "Contact US"),
+                          Icons.phone_outlined, getTranslate(context, "contactUS")),
                     ),
                     GestureDetector(
                       onTap: () {},
                       child: _buildListViewItems(
-                          Icons.share_outlined, "Share App"),
+                          Icons.share_outlined, getTranslate(context, "shareApp")),
                     ),
                     GestureDetector(
                       onTap: () {
@@ -124,11 +124,11 @@ class CustomDrawer extends StatelessWidget {
                         Navigator.pop(context);
                       },
                       child: _buildListViewItems(
-                          Icons.settings_outlined, "Settings"),
+                          Icons.settings_outlined, getTranslate(context, "settings")),
                     ),
                     GestureDetector(
                       onTap: () {},
-                      child: _buildListViewItems(Icons.login_outlined, "LogIn"),
+                      child: _buildListViewItems(Icons.login_outlined, getTranslate(context, "logIn")),
                     ),
                   ],
                 ),

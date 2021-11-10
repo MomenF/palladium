@@ -19,9 +19,9 @@ class _SettingScreenState extends State<SettingScreen> {
     return Scaffold(
       backgroundColor: backGroundApp,
       appBar: AppBar(
-        title: const Text(
-          "Settings",
-          style: TextStyle(color: Color(0xff39719F)),
+        title: Text(
+          getTranslate(context, "settings"),
+          style: const TextStyle(color: Color(0xff39719F)),
         ),
         centerTitle: true,
         elevation: 0,
@@ -29,7 +29,7 @@ class _SettingScreenState extends State<SettingScreen> {
       ),
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.all(50.0),
+          padding: const EdgeInsets.only(top: 30.0,bottom: 50.0,left: 50.0,right: 50.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -52,7 +52,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     style: TextStyle(color: Color(0xff39719F), fontSize: 14),
                   ),
                   const SizedBox(
-                    height: 50.0,
+                    height: 10.0,
                   ),
                 ],
               ),
@@ -60,10 +60,10 @@ class _SettingScreenState extends State<SettingScreen> {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
+                    children:  [
                       Text(
-                        "Email : ",
-                        style: TextStyle(
+                        getTranslate(context, "email"),
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
@@ -80,10 +80,10 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
+                    children:  [
                       Text(
-                        "PHONE : ",
-                        style: TextStyle(
+                        getTranslate(context, "phone"),
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
@@ -100,10 +100,10 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children:  const [
+                    children:  [
                       Text(
-                        "COUNTRY : ",
-                        style: TextStyle(
+                        getTranslate(context, "country"),
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
@@ -120,10 +120,10 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
+                    children:  [
                       Text(
-                        "ACCOUNT TYPE : ",
-                        style: TextStyle(
+                        getTranslate(context, "accountType"),
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
@@ -152,9 +152,9 @@ class _SettingScreenState extends State<SettingScreen> {
                             .myChangeLanguage();
                       },
                       // padding: EdgeInsets.symmetric(vertical: 0,horizontal: 10.0),
-                      child: const Text(
-                        " Change Language",
-                        style: TextStyle(color: Colors.white),
+                      child: Text(
+                        getTranslate(context, "changeLanguage"),
+                        style: const TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
