@@ -131,7 +131,7 @@ class CustomDrawer extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const LoginScreen()));
                       },
-                      child: _buildListViewItems(Icons.login_outlined, getTranslate(context, "logIn")),
+                      child: _buildListViewItems(Icons.exit_to_app, getTranslate(context, "logIn")),
                     ),
                   ],
                 ),

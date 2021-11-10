@@ -28,6 +28,8 @@ const Map<String, String> arabicLanguage = {
   "Email" : "الإميل",
   "Password" : "الرقم السري",
   "SIGN UP" : "إنشاء حساب",
+  "createANewAccount" : "إنشاء\nحساب جديد",
+  "forTheBestExperienceWithPalladium" : "للحصول على أفضل تجربة\nمع بلاديوم",
 
 
 };

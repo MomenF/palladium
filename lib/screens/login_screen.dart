@@ -9,7 +9,26 @@ class LoginScreen extends StatefulWidget {
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenState extends State<LoginScreen>
+    with TickerProviderStateMixin {
+  late TabController _controller;
+  int _index = 1;
+
+  // String part1 = "loginNow";
+  // String part2 = "You can use Mobile number or Email to Enter App";
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _controller = TabController(length: 2, vsync: this,initialIndex: 0);
+
+    _controller.addListener(() {
+      _index = _controller.previousIndex;
+      setState(() {});
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -65,7 +84,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     Row(
                       children: [
                         Text(
-                          getTranslate(myProviderContext!, "loginNow"),
+                          getTranslate(
+                              myProviderContext!,
+                              _index == 0
+                                  ? "loginNow"
+                                  : "createANewAccount"),
                           style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -80,14 +103,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     SizedBox(height: height * 0.01),
                     Text(
-                      getTranslate(myProviderContext!,
-                          "You can use Mobile number or Email to Enter App"),
+                      getTranslate(
+                          myProviderContext!,
+                          _index == 0
+                              ? "You can use Mobile number or Email to Enter App"
+                              : "forTheBestExperienceWithPalladium"),
                       style:
-                          const TextStyle(color: Colors.white, fontSize: 16.0),
+                           TextStyle(color: Colors.white, fontSize: 16.0)
+
                     ),
                     const SizedBox(height: 10.0),
                     Expanded(
                       child: ListView(
+                        padding: const EdgeInsets.only(bottom: 30.0),
                         children: [
                           SizedBox(
                             width: width,
@@ -99,6 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   backgroundColor: backGroundApp,
                                   elevation: 0,
                                   flexibleSpace: TabBar(
+                                    controller: _controller,
                                     indicatorColor: Colors.blueAccent,
                                     indicatorSize: TabBarIndicatorSize.tab,
                                     tabs: [
@@ -128,6 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                 ),
                                 body: TabBarView(
+                                  controller: _controller,
                                   children: [
                                     ///SingUp Widget
                                     Container(
@@ -232,7 +262,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 23),
                                             ),
-                                          )
+                                          ),
+                                          const SizedBox(height: 55.0),
                                         ],
                                       ),
                                     ),
@@ -299,7 +330,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 23),
                                             ),
-                                          )
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -307,7 +338,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
