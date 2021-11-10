@@ -24,7 +24,7 @@ class _NavScreenState extends State<NavScreen> {
     const HomeScreen(),
     const TypeScreen(),
     const SearchScreen(),
-    const PaymentScreen(),
+    const Plans(),
     const SettingScreen(),
   ];
   @override

@@ -6,3 +6,5 @@ export 'payment_screen.dart';
 export 'type_screen.dart';
 export 'login_screen.dart';
 export 'setting_screen.dart';
+export 'subscribe.dart';
+export 'notification.dart';
