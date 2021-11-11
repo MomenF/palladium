@@ -41,20 +41,20 @@ Color myColor = Colors.white;
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("Search Item",style: Theme.of(context).textTheme.bodyText1,),
-                            SizedBox(
+                            const SizedBox(
                               height: 10.0,
                             ),
                             Text("User(s)",style: Theme.of(context).textTheme.bodyText1,),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 50.0,
                         ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text("100",style: Theme.of(context).textTheme.bodyText1,),
-                            SizedBox(
+                            const SizedBox(
                               height: 10.0,
                             ),
                             Text("1User(s)",style: Theme.of(context).textTheme.bodyText1,),
@@ -87,7 +87,7 @@ Color myColor = Colors.white;
                         },
                       ),
                       Text("For 1 Month",style: Theme.of(context).textTheme.bodyText1,),
-                      SizedBox(
+                      const SizedBox(
                         width: 40.0,
                       ),
                       Text("20",style: Theme.of(context).textTheme.bodyText1,),

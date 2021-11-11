@@ -89,14 +89,14 @@ class CustomDrawer extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>TypeScreen() ));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const TypeScreen() ));
                       },
                       child:
                           _buildListViewItems(Icons.layers_outlined, "Brands"),
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CalculatorScreen() ));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const CalculatorScreen() ));
                       },
                       child: _buildListViewItems(Icons.cloud, "Calculator"),
                     ),
@@ -106,7 +106,7 @@ class CustomDrawer extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Plans()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Plans()));
                       },
                       child: _buildListViewItems(
                           Icons.credit_card_outlined, "Subscriptions"),

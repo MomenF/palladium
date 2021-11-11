@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:palladium/config.dart';
+import 'package:palladium/languages/custome_languages.dart';
 import 'package:palladium/screens/subscribe_type.dart';
 
 class Plans extends StatefulWidget {
@@ -13,103 +15,98 @@ class _PlansState extends State<Plans> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff19233E),
+      backgroundColor: backGroundApp,
       appBar: AppBar(
-        title: Text("Plans",style: TextStyle(color: Color(0xff39719F)),),
+        title: Text(
+          getTranslate(context, "plans"),
+          style: const TextStyle(color: Color(0xff39719F)),
+        ),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Color(0xff19233E),
+        backgroundColor: backGroundApp,
       ),
       body: Container(
-        padding: const EdgeInsets.all(50.0),
+        padding: const EdgeInsets.symmetric(horizontal: 38.0, vertical: 30.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-
               InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                      SubscripeType(imageType: "bronze",)
-                  ));
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SubscripeType(
+                                imageType: "bronze",
+                              )));
                 },
-                child: Container(
-                  height: 150.0,
+                child: SizedBox(
+                  height: 130.0,
+                  width: double.maxFinite,
                   child: Stack(
                     children: [
-                      Image.asset("assets/images/bronze.png",fit: BoxFit.fill,height: 150),
-                      Positioned(
-                          top: 105.0,
-                          right: 70.0,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("500 view"),
-                              Text("1 No devices"),
-                            ],
-                          ))
-
-
+                      Image.asset(
+                        "assets/images/bronze.png",
+                        fit: BoxFit.fill,
+                        height: 130,
+                        width: double.maxFinite,
+                      ),
                     ],
                   ),
                 ),
               ),
+              const SizedBox(height: 10.0),
               InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                      SubscripeType(imageType: "silver",)
-                  ));
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SubscripeType(
+                                imageType: "silver",
+                              )));
                 },
-                child: Container(
-                  height: 150.0,
+                child: SizedBox(
+                  height: 130.0,
+                  width: double.maxFinite,
                   child: Stack(
                     children: [
-                      Image.asset("assets/images/silver.png",fit: BoxFit.fill,height: 150,),
-                      Positioned(
-                          top: 105.0,
-                          right: 70.0,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("1000 view"),
-                              Text("3 No devices"),
-                            ],
-                          ))
+                      Image.asset(
+                        "assets/images/silver.png",
+                        fit: BoxFit.fill,
+                        height: 130,
+                        width: double.maxFinite,
 
+                      ),
                     ],
                   ),
                 ),
               ),
+              const SizedBox(height: 10.0),
               InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                      SubscripeType(imageType: "gold",)
-                  ));
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SubscripeType(
+                                imageType: "gold",
+                              )));
                 },
-                child: Container(
-                  height: 150.0,
+                child: SizedBox(
+                  height: 130.0,
+                  width: double.maxFinite,
                   child: Stack(
                     children: [
-                      Image.asset("assets/images/gold.png",fit: BoxFit.fill,height: 150,),
-                      Positioned(
-                          top: 105.0,
-                          right: 70.0,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("1000 view"),
-                              Text("3 No devices"),
-                            ],
-                          ))
-
-
+                      Image.asset(
+                        "assets/images/gold.png",
+                        fit: BoxFit.fill,
+                        height: 130,
+                        width: double.maxFinite,
+                      ),
                     ],
                   ),
                 ),
               ),
-
-
             ],
           ),
         ),

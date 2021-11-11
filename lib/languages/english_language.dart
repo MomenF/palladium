@@ -28,7 +28,6 @@ const Map<String, String> englishLanguage = {
   "Email" : "Email",
   "Password" : "Password",
   "SIGN UP" : "SIGN UP",
-
   "createANewAccount" : "Create a\nNew Account",
   "forTheBestExperienceWithPalladium" : "For The Best Experience\nWith Palladium",
 
