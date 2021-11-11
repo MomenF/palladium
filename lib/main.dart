@@ -31,23 +31,12 @@ class MyApp extends StatelessWidget {
       ),
       home: MultiProvider(
         providers: [
-          ChangeNotifierProvider<LanguageProvider>(
-              create: (_) => LanguageProvider()),
+          ChangeNotifierProvider<LanguageProvider>(create: (_) => LanguageProvider()),
           ChangeNotifierProvider<IndexScreen>(create: (_) => IndexScreen()),
           ChangeNotifierProvider<Brand>(create: (_) => Brand()),
           ChangeNotifierProvider<Country>(create: (_) => Country()),
           ChangeNotifierProvider<MemberShip>(create: (_) => MemberShip()),
           ChangeNotifierProvider<Product>(create: (_) => Product()),
-
-          // ChangeNotifierProvider<MyProvider>(create: (_) => MyProvider()),
-          // ChangeNotifierProxyProvider<UserInformation, Advertisement>(
-          // create: (_) => Advertisement(),
-          // update: (ctx, valueUI, valueAdv) => valueAdv!
-          // ..getDataAuthToken(authToken: valueUI.token.toString())),
-          // ChangeNotifierProxyProvider<UserInformation, Comments>(
-          // create: (_) => Comments(),
-          // update: (ctx, valueUI, valueCom) => valueCom!
-          // ..getDataAuthToken(authToken: valueUI.token.toString())),
         ],
         child: isLogIn == true ? const NavScreen() : const SplashScreen(),
       ),

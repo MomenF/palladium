@@ -4,6 +4,8 @@ import '../config.dart';
 
 
 class NotificationScreen extends StatefulWidget {
+  const NotificationScreen({Key? key}) : super(key: key);
+
   @override
   _NotificationScreenState createState() => _NotificationScreenState();
 }
@@ -18,25 +20,25 @@ class _NotificationScreenState extends State<NotificationScreen> {
         backgroundColor: backGroundApp,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back,color: Colors.white,),
+          icon: const Icon(Icons.arrow_back,color: Colors.white,),
           onPressed: (){
             Navigator.pop(context);
           },
         ),
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Notifications',
           style: TextStyle(
             fontFamily: 'Open Sans',
             fontSize: 20,
-            color: const Color(0xff199be0),
+            color: Color(0xff199be0),
             letterSpacing: 0.8,
           ),
 
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.search,color: Colors.white,),
+            icon: const Icon(Icons.search,color: Colors.white,),
             onPressed: (){},
           ),
         ],
@@ -141,13 +143,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
         child: Column(
           children: [
             SizedBox(height: height*.05,),
-            Center(
+            const Center(
               child: Text(
                 'Here you will see notifications for applications',
                 style: TextStyle(
                   fontFamily: 'Europa',
                   fontSize: 14,
-                  color: const Color(0xffffffff),
+                  color: Color(0xffffffff),
                   height: 1.5625,
                 ),
                 textHeightBehavior: TextHeightBehavior(applyHeightToFirstAscent: false),
@@ -160,7 +162,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               child: ListView.separated(
                 shrinkWrap: true,
                 itemCount: 4,
-                separatorBuilder:(context, index) =>  SizedBox(height: 10.0),
+                separatorBuilder:(context, index) =>  const SizedBox(height: 10.0),
                 itemBuilder:(context, index) =>  Container(
                   height: height*.07,
                   decoration: BoxDecoration(
@@ -174,13 +176,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       children: [
                         IconButton(
                             onPressed: (){},
-                            icon: Icon(Icons.notifications_outlined,color:  Color(0xff198dbe))),
-                        Text(
+                            icon: const Icon(Icons.notifications_outlined,color:  Color(0xff198dbe))),
+                        const Text(
                           'هذا مثال على اشعار مالوش أي ستين لازمه',
                           style: TextStyle(
                             fontFamily: 'FF Shamel Family Sans One',
                             fontSize: 13,
-                            color: const Color(0xff198dbe),
+                            color: Color(0xff198dbe),
                             fontWeight: FontWeight.w300,
                           ),
                           textAlign: TextAlign.right,

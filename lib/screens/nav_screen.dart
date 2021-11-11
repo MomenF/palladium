@@ -24,7 +24,7 @@ class _NavScreenState extends State<NavScreen> {
     const HomeScreen(),
     const TypeScreen(),
     const SearchScreen(),
-    const PaymentScreen(),
+    const Plans(),
     const SettingScreen(),
   ];
   @override
@@ -35,6 +35,8 @@ class _NavScreenState extends State<NavScreen> {
     Provider.of<Country>(context, listen: false).fitchData();
     Provider.of<MemberShip>(context, listen: false).fitchData();
     Provider.of<Product>(context, listen: false).fitchData();
+
+    myProviderContext = context;
   }
 
   @override
@@ -67,32 +69,7 @@ class _NavScreenState extends State<NavScreen> {
                 //     )),
                 actions: [
                   IconButton(
-                      onPressed: () async {
-                        print("start");
-                        Provider.of<LanguageProvider>(context, listen: false)
-                            .myChangeLanguage();
-                        print(Provider.of<Brand>(context, listen: false)
-                            .brands![0]
-                            .createdAt);
-                        print(Provider.of<Country>(context, listen: false)
-                            .countries![0]
-                            .memberships![0]
-                            .pivot!
-                            .countryId);
-
-                        var request = http.MultipartRequest(
-                            'POST',
-                            Uri.parse(
-                                'https://packages.3codeit.com/api/login'));
-                        request.fields.addAll(
-                            {'email': 'maged@ma.com', 'password': '123'});
-                        http.StreamedResponse response = await request.send();
-                        if (response.statusCode == 200) {
-                          print(await response.stream.bytesToString());
-                        } else {
-                          print(response.reasonPhrase);
-                        }
-                      },
+                      onPressed: () async {},
                       icon: const Icon(
                         Icons.search,
                         color: Colors.white,

@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:palladium/languages/custome_languages.dart';
 
 import '../screens/screens.dart';
 import '../config.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    myProviderContext = context;
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,9 +54,9 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 60.0),
-              const Text(
-                "Palladium",
-                style: TextStyle(fontSize: 30.0, color: Colors.white),
+               Text(
+                getTranslate(context, "palladium"),
+                style: const TextStyle(fontSize: 30.0, color: Colors.white),
               ),
               const SizedBox(height: 10.0),
               Container(
