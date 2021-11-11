@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:palladium/screens/calculator.dart';
 import 'package:palladium/screens/subscribe.dart';
+import 'package:palladium/screens/type_screen.dart';
 import '../languages/languages.dart';
 
 import '../services/services.dart';
@@ -86,12 +88,16 @@ class CustomDrawer extends StatelessWidget {
                       child: _buildListViewItems(Icons.search, "Search Items"),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>TypeScreen() ));
+                      },
                       child:
                           _buildListViewItems(Icons.layers_outlined, "Brands"),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CalculatorScreen() ));
+                      },
                       child: _buildListViewItems(Icons.cloud, "Calculator"),
                     ),
                     GestureDetector(
