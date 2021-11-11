@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:palladium/screens/subscribe.dart';
 import '../languages/languages.dart';
 
 import '../services/services.dart';
@@ -98,7 +99,9 @@ class CustomDrawer extends StatelessWidget {
                       child: _buildListViewItems(Icons.cloud, "Total Pricing"),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Plans()));
+                      },
                       child: _buildListViewItems(
                           Icons.credit_card_outlined, "Subscriptions"),
                     ),
