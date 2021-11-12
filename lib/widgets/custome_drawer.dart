@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:palladium/screens/calculator.dart';
+import 'package:palladium/screens/screens.dart';
 import 'package:palladium/screens/subscribe.dart';
 import 'package:palladium/screens/type_screen.dart';
 import '../languages/languages.dart';
@@ -84,54 +85,71 @@ class CustomDrawer extends StatelessWidget {
                           getTranslate(context, "favorites")),
                     ),
                     GestureDetector(
-                      onTap: () {},
-                      child: _buildListViewItems(Icons.search, "Search Items"),
+                      onTap: () {
+                        changeIndexScreen(context, 2);
+                        Navigator.pop(context);
+                      },
+                      child: _buildListViewItems(Icons.search, getTranslate(context, "searchItems")),
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const TypeScreen() ));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const TypeScreen()));
                       },
                       child:
-                          _buildListViewItems(Icons.layers_outlined, "Brands"),
+                          _buildListViewItems(Icons.layers_outlined, getTranslate(context, "brands")),
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const CalculatorScreen() ));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const CalculatorScreen()));
                       },
-                      child: _buildListViewItems(Icons.cloud, "Calculator"),
+                      child: _buildListViewItems(Icons.cloud, getTranslate(context, "calculator")),
                     ),
                     GestureDetector(
                       onTap: () {},
-                      child: _buildListViewItems(Icons.cloud, "Total Pricing"),
+                      child: _buildListViewItems(Icons.cloud, getTranslate(context, "totalPricing")),
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Plans()));
-                      },
-                      child: _buildListViewItems(
-                          Icons.credit_card_outlined, "Subscriptions"),
-                    ),
-                    GestureDetector(
-                      onTap: () {},
-                      child: _buildListViewItems(
-                          Icons.phone_outlined, "Contact US"),
-                    ),
-                    GestureDetector(
-                      onTap: () {},
-                      child: _buildListViewItems(
-                          Icons.share_outlined, "Share App"),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                            changeIndexScreen(context,4);
+                        changeIndexScreen(context, 1);
                         Navigator.pop(context);
                       },
                       child: _buildListViewItems(
-                          Icons.settings_outlined, "Settings"),
+                          Icons.credit_card_outlined, getTranslate(context, "subscriptions")),
                     ),
                     GestureDetector(
                       onTap: () {},
-                      child: _buildListViewItems(Icons.login_outlined, "LogIn"),
+                      child: _buildListViewItems(
+                          Icons.phone_outlined, getTranslate(context, "contactUS")),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: _buildListViewItems(
+                          Icons.share_outlined, getTranslate(context, "shareApp")),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        changeIndexScreen(context, 4);
+                        Navigator.pop(context);
+                      },
+                      child: _buildListViewItems(
+                          Icons.settings_outlined, getTranslate(context, "settings")),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const LoginScreen()));
+                      },
+                      child: _buildListViewItems(Icons.login_outlined, getTranslate(context, "logIn")),
                     ),
                   ],
                 ),

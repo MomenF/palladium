@@ -13,22 +13,22 @@ class TypeScreen extends StatefulWidget {
 class _TypeScreenState extends State<TypeScreen> {
   @override
   Widget build(BuildContext context) {
-    var mediaHeight =  MediaQuery.of(context).size.height;
-    var mediaWidth =  MediaQuery.of(context).size.width;
+    var mediaHeight = MediaQuery.of(context).size.height;
+    var mediaWidth = MediaQuery.of(context).size.width;
 
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: backGroundApp,
-        appBar: AppBar(
-          title: Text(
-            "Type",
-            style: const TextStyle(color: Color(0xff39719F)),
-          ),
-          centerTitle: true,
-          elevation: 0,
-          backgroundColor: backGroundApp,
+    return Scaffold(
+      backgroundColor: backGroundApp,
+      appBar: AppBar(
+        title: const Text(
+          "Type",
+          style: TextStyle(color: Color(0xff39719F)),
         ),
-        body: Container(
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: backGroundApp,
+      ),
+      body: SafeArea(
+        child: Container(
           padding: const EdgeInsets.all(20.0),
           child: SingleChildScrollView(
             child: Column(
@@ -36,32 +36,54 @@ class _TypeScreenState extends State<TypeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    typeRank(mediaHeight: mediaHeight,mediaWidth: mediaWidth,type:"mercedes",name: "Mercedes"  ),
-                    typeRank(mediaHeight: mediaHeight,mediaWidth: mediaWidth,type:"shevo",name: "Chevorolet"  )
-
+                    typeRank(
+                        mediaHeight: mediaHeight,
+                        mediaWidth: mediaWidth,
+                        type: "mercedes",
+                        name: "Mercedes"),
+                    typeRank(
+                        mediaHeight: mediaHeight,
+                        mediaWidth: mediaWidth,
+                        type: "shevo",
+                        name: "Chevorolet")
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    typeRank(mediaHeight: mediaHeight,mediaWidth: mediaWidth,type:"audo",name: "Audi"  ),
-                    typeRank(mediaHeight: mediaHeight,mediaWidth: mediaWidth,type:"bmw",name: "BMW"  )
+                    typeRank(
+                        mediaHeight: mediaHeight,
+                        mediaWidth: mediaWidth,
+                        type: "audo",
+                        name: "Audi"),
+                    typeRank(
+                        mediaHeight: mediaHeight,
+                        mediaWidth: mediaWidth,
+                        type: "bmw",
+                        name: "BMW")
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    typeRank(mediaHeight: mediaHeight,mediaWidth: mediaWidth,type:"audo",name: "Audi"  ),
-                    typeRank(mediaHeight: mediaHeight,mediaWidth: mediaWidth,type:"bmw",name: "BMW"  )
+                    typeRank(
+                        mediaHeight: mediaHeight,
+                        mediaWidth: mediaWidth,
+                        type: "audo",
+                        name: "Audi"),
+                    typeRank(
+                        mediaHeight: mediaHeight,
+                        mediaWidth: mediaWidth,
+                        type: "bmw",
+                        name: "BMW")
                   ],
                 ),
-
               ],
             ),
           ),
@@ -70,40 +92,51 @@ class _TypeScreenState extends State<TypeScreen> {
     );
   }
 
-  Container typeRank({required double mediaHeight, required double mediaWidth, required String type , required String name}) {
+  Container typeRank(
+      {required double mediaHeight,
+      required double mediaWidth,
+      required String type,
+      required String name}) {
     return Container(
-
-                    height: mediaHeight*.225,
-                    width: mediaWidth*.4,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25.0)
-                    ),
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
-                            color: Colors.black,
-                          ),
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Image.asset("assets/images/$type.png",height:mediaHeight*.075 , width: mediaWidth*.15,),
-                            SizedBox(
-                              height: mediaHeight*.025,
-                            ),
-                            Text("$name",style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold,color: Colors.white),),
-                            SizedBox(
-                              height: mediaHeight*.025,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  );
+      height: mediaHeight * .225,
+      width: mediaWidth * .4,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(25.0)),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.0),
+              color: Colors.black,
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Image.asset(
+                "assets/images/$type.png",
+                height: mediaHeight * .075,
+                width: mediaWidth * .15,
+              ),
+              SizedBox(
+                height: mediaHeight * .025,
+              ),
+              Text(
+                name,
+                style: const TextStyle(
+                    fontSize: 21,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              SizedBox(
+                height: mediaHeight * .025,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }

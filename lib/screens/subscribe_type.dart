@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:palladium/config.dart';
 
 class SubscripeType extends StatefulWidget {
   final String imageType  ;
@@ -18,12 +19,12 @@ Color myColor = Colors.white;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff19233E),
+      backgroundColor: backGroundApp,
       appBar: AppBar(
         title: Text("select subscription type",style: TextStyle(color: Color(0xff39719F)),),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Color(0xff19233E),
+        backgroundColor: backGroundApp,
       ),
       body: Center(
         child: Column(

@@ -21,15 +21,18 @@ const Map<String, String> arabicLanguage = {
   "logIn" : "تسجيل الدخول",
   "logRecordYourActivities" : "تسجيل و تسجيل نشاطك",
   "loginNow" : "سجل الأن",
-  "You can use Mobile number or Email to Enter App" : "يمكنك استخدام رقم الهاتف المحمول أو البريد الإلكتروني لإدخال التطبيق",
+  "You can use Mobile number or Email to Enter App" : "يمكنك استخدام رقم الهاتف المحمول أو الإميل\nللدخول على التطبيق ",
   "signUp" : "إنشاء حساب",
   "fullName" : "الإسم بالكامل",
   "mobile" : "الجوال",
   "Email" : "الإميل",
   "Password" : "الرقم السري",
   "SIGN UP" : "إنشاء حساب",
-  "createANewAccount" : "إنشاء\nحساب جديد",
+  "createANewAccount" : "إنشاء حساب جديد",
   "forTheBestExperienceWithPalladium" : "للحصول على أفضل تجربة\nمع بلاديوم",
+  "company" : "شركة",
+  "individual" : "فردي",
+
 
 
 };

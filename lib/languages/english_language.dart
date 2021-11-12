@@ -21,7 +21,7 @@ const Map<String, String> englishLanguage = {
   "logIn" : "Log In",
   "logRecordYourActivities" : "Log & record your activities",
   "loginNow" : "Login Now",
-  "You can use Mobile number or Email to Enter App" : "You can use Mobile number or Email to Enter App",
+  "You can use Mobile number or Email to Enter App" : "You can use Mobile number or\nEmail to Enter App",
   "signUp" : "Sign Up",
   "fullName" : "Full name",
   "mobile" : "Mobile",
@@ -30,6 +30,8 @@ const Map<String, String> englishLanguage = {
   "SIGN UP" : "SIGN UP",
   "createANewAccount" : "Create a\nNew Account",
   "forTheBestExperienceWithPalladium" : "For The Best Experience\nWith Palladium",
+  "company" : "Company",
+  "individual" : "Individual",
 
   // "" : "",
   // "" : "",

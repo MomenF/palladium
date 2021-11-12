@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:palladium/config.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({Key? key}) : super(key: key);
@@ -17,15 +18,15 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color(0xFF19233E),
+      backgroundColor: backGroundApp,
       appBar: AppBar(
-        backgroundColor: Color(0xFF19233E),
+        backgroundColor: backGroundApp,
         elevation: 0,
-        title: (Text(
+        title: (const Text(
           "Calculator",
           style: TextStyle(fontSize: 20),
         )),
-        actions: [
+        actions: const [
           Center(child: Text('Clear', style: TextStyle(fontSize: 20))),
           SizedBox(width: 5),
         ],

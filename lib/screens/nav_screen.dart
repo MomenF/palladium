@@ -35,7 +35,6 @@ class _NavScreenState extends State<NavScreen> {
     Provider.of<Country>(context, listen: false).fitchData();
     Provider.of<MemberShip>(context, listen: false).fitchData();
     Provider.of<Product>(context, listen: false).fitchData();
-
     myProviderContext = context;
   }
 
